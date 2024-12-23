@@ -3,8 +3,10 @@ import Logo from "../../assets/images/logo.jpg";
 import CountryDropDown from "../CountryDropDown";
 import { FaSearch } from "react-icons/fa";
 import { Button } from "@mui/material";
-
-
+import { FaRegUser } from "react-icons/fa";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import SearchBox from "./SearchBox";
+import Navigation from "./NavBar";
 
 const Header = () => {
   return (
@@ -28,17 +30,29 @@ const Header = () => {
                 </Link>
               </div>
               <div className="col-sm-10 d-flex align-items-center part2">
-             <CountryDropDown/>
-             {/*Header Search Bar Start Here */}
-             <div className="headerSearchBar ml-3 mr-3">
-                <input type="text" placeholder="Search for products" />
-                <Button><FaSearch /></Button>
+                <CountryDropDown />
+                <SearchBox />
+                <div className="part3 d-flex align-items-center ml-auto">
+                  <Button className="circle mr-3">
+                    <FaRegUser />
+                  </Button>
+                  <div className="ml-auto cartTab d-flex align-items-center">
+                    <span className="price">LKR 250</span>
+                    <div className="position-relative ml-2">
+                      <Button className="circle">
+                        <MdOutlineShoppingCart />
+                      </Button>
+                      <span className="count d-flex align-items-center justify-content-center">
+                        2
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              {/*Header Search Bar End Here */}
             </div>
           </div>
-        </div>
-      </header>
+        </header>
+        <Navigation />
       </div>
     </>
   );
