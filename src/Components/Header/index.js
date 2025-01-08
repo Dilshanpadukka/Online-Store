@@ -30,7 +30,7 @@ const Header = () => {
                 </Link>
               </div>
               <div className="col-sm-10 d-flex align-items-center part2">
-                <CountryDropDown />
+                 <CountryDropDown />
                 <SearchBox />
                 <div className="part3 d-flex align-items-center ml-auto">
                   <Button className="circle mr-3">

@@ -20,6 +20,16 @@ body {
     max-width: 1200px;
   }
 }
+::-webkit-scrollbar{
+  width: 8px !important;
+  height: 8px !important;
+}
+::-webkit-scrollbar-thumb{
+  background: #ccc !important;
+}
+::-webkit-scrollbar-track{
+  background: transparent !important;
+}
 
 /* .container{
   max-width: 90%;
@@ -133,8 +143,39 @@ header .part3 .circle svg {
   width: 20px;
   height: 20px;
 }
-.locationModal .Multipaper-elavation{
+.locationModal .MuiPaper-elevation{
   padding: 25px;
+}
+
+.locationModal .countryList{
+  margin-bottom: 0px;
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.locationModal .countryList li{
+  list-style: none;
+  width: 100%;
+}
+.locationModal .countryList li button{
+  width: 100%;
+  text-transform: capitalize !important;
+  color: #000 !important;
+  justify-content: flex-start !important; 
+  padding: 15px 20px !important;
+}
+.locationModal .closeBtn{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #000 !important;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+.locationModal .closeBtn svg{
+  font-size: 22px !important;
 }
 nav .navPart1{
   max-width: 20%;
@@ -169,7 +210,10 @@ nav .navPart2 ul{
   margin-bottom: 0px;
 }
 nav .navPart2 ul li a{
-  font-size: 15px;
+  text-decoration: none;
+}
+nav .navPart2 ul li a button{
+  font-size: 14px !important;
   font-weight: 500;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.7);

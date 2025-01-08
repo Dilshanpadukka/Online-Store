@@ -26,13 +26,13 @@ const Navigation = () => {
 
               <div className="col-sm-9 navPart2 d-flex align-items-center">
                 <ul className="list list-inline ml-auto">
-                    <li className="list-inline-item"><Link to="/"><TiHomeOutline />&nbsp;Home</Link></li>
-                    <li className="list-inline-item"><Link to="/"><GiClothes />&nbsp;Fashion</Link></li>
-                    <li className="list-inline-item"><Link to="/"><LuCircuitBoard />&nbsp;Electronic</Link></li>
-                    <li className="list-inline-item"><Link to="/"><PiHamburger />&nbsp;Bakery</Link></li>
-                    <li className="list-inline-item"><Link to="/"><GiFruitBowl />&nbsp;Grocery</Link></li>
-                    <li className="list-inline-item"><Link to="/"><SiBloglovin />&nbsp;Blog</Link></li>
-                    <li className="list-inline-item"><Link to="/"><FaPhoneVolume />&nbsp;Contact</Link></li>
+                    <li className="list-inline-item"><Link to="/"><Button><TiHomeOutline />&nbsp;Home</Button></Link></li>
+                    <li className="list-inline-item"><Link to="/"><Button><GiClothes />&nbsp;Fashion</Button></Link></li>
+                    <li className="list-inline-item"><Link to="/"><Button><LuCircuitBoard />&nbsp;Electronic</Button></Link></li>
+                    <li className="list-inline-item"><Link to="/"><Button><PiHamburger />&nbsp;Bakery</Button></Link></li>
+                    <li className="list-inline-item"><Link to="/"><Button><GiFruitBowl />&nbsp;Grocery</Button></Link></li>
+                    <li className="list-inline-item"><Link to="/"><Button><SiBloglovin />&nbsp;Blog</Button></Link></li>
+                    <li className="list-inline-item"><Link to="/"><Button><FaPhoneVolume />&nbsp;Contact</Button></Link></li>
 
                 </ul>
               </div>
