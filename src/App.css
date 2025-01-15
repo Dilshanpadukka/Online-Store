@@ -164,6 +164,12 @@ header .part3 .circle svg {
   justify-content: flex-start !important; 
   padding: 15px 20px !important;
 }
+.locationModal .countryList li button:hover{
+  background: #f1f1f1;
+}
+.locationModal .countryList li button.active{
+  background: #ccc !important;
+}
 .locationModal .closeBtn{
   position: absolute;
   top: 20px;

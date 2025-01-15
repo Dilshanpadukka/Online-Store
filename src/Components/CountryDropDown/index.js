@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Button from "@mui/material/Button";
 import { FaAngleDown } from "react-icons/fa";
 import Dialog from "@mui/material/Dialog";
@@ -16,11 +16,29 @@ const CountryDropDown = () => {
   const [isOpenModal, setisOpenModal] = useState(false);
   const [selectedTab,setselectedTab] = useState(null);
 
+  const [countryList, setCountryList] = useState([]);
+
   const context = useContext(MyContext);
 
   const selectCountry = (index) => {
     setselectedTab(index);
     setisOpenModal(false);
+  }
+
+  useEffect(() => {
+    setCountryList(context.countryList);
+  },[])
+
+  const filterList = (e) => {
+    const keyword = e.target.value.toLowerCase();
+    if(keyword!==""){
+      const list = countryList.filter((item) => {
+        return item.country.toLowerCase().includes(keyword)
+      });
+      setCountryList(list);
+    }else{
+      setCountryList(context.countryList);
+    }
   }
 
   return (
@@ -50,14 +68,14 @@ const CountryDropDown = () => {
         </Button>
 
         <div className="headerSearchBar w-100">
-          <input type="text" placeholder="Search your arera" />
+          <input type="text" placeholder="Search your arera" onChange={filterList} />
           <Button>
             <FaSearch />
           </Button>
         </div>
         <ul className="countryList mt-3">
-          {context.countryList?.length !== 0 &&
-            context.countryList?.map((item, index) => {
+          {countryList?.length !== 0 &&
+            countryList?.map((item, index) => {
               return (
                 <li key={index}>
                   <Button onClick={() => selectCountry(index)}
