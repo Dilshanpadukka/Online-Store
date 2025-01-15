@@ -16,7 +16,7 @@ const Navigation = () => {
     <nav>
           <div className="container">
             <div className="row">
-              <div className="col-sm-3 navPart1">
+              <div className="col-sm-2 navPart1">
                 <Button className="allCategories align-items-center">
                     <span className="iconList mr-2"><FaList /></span>
                     <span className="text">All Categories</span>
@@ -24,7 +24,7 @@ const Navigation = () => {
                     </Button>
               </div>
 
-              <div className="col-sm-9 navPart2 d-flex align-items-center">
+              <div className="col-sm-10 navPart2 d-flex align-items-center">
                 <ul className="list list-inline ml-auto">
                     <li className="list-inline-item"><Link to="/"><Button><TiHomeOutline />&nbsp;Home</Button></Link></li>
                     <li className="list-inline-item"><Link to="/"><Button><GiClothes />&nbsp;Fashion</Button></Link></li>

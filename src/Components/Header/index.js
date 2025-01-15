@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.jpg";
 import CountryDropDown from "../CountryDropDown";
-import { FaSearch } from "react-icons/fa";
 import { Button } from "@mui/material";
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
@@ -9,6 +8,9 @@ import SearchBox from "./SearchBox";
 import Navigation from "./NavBar";
 
 const Header = () => {
+
+// const context = useContext(MyContext);
+
   return (
     <>
       <div className="headerWrapper">
